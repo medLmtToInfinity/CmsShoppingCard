@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmsShoppingCard", "CmsShoppingCard\CmsShoppingCard.csproj", "{00CB4589-C8C2-4C7A-9B76-3C89C0694B82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00CB4589-C8C2-4C7A-9B76-3C89C0694B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00CB4589-C8C2-4C7A-9B76-3C89C0694B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00CB4589-C8C2-4C7A-9B76-3C89C0694B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00CB4589-C8C2-4C7A-9B76-3C89C0694B82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42EBB9EE-F451-4C7B-A987-483656D6F2B1}
+	EndGlobalSection
+EndGlobal
