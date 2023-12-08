@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CmsShoppingCard.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CmsShoppingCard.Infrastructure
 {
@@ -8,8 +9,7 @@ namespace CmsShoppingCard.Infrastructure
         {
 
         }
-        {
-            
-        }
+        public DbSet<Page> Pages { get; set; }
+
     }
 }
