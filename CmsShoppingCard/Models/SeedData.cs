@@ -23,21 +23,21 @@ namespace CmsShoppingCard.Models
                         Title = "Home",
                         Slug = "home",
                         Content = "Home Page",
-                        Sorting = 100
+                        Sorting = 0
                     },
                     new Page
                     {
                         Title = "About Us",
                         Slug = "about-us",
                         Content = "About Us Page",
-                        Sorting = 100
+                        Sorting = 1
                     },
                     new Page
                     {
                         Title = "Services",
                         Slug = "services",
                         Content = "Services Page",
-                        Sorting = 100
+                        Sorting = 2
                     }
 
                 );

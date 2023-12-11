@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CmsShoppingCard.Areas.Admin.Controllers
@@ -109,6 +110,22 @@ namespace CmsShoppingCard.Areas.Admin.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+
+        //Post /Pages/Reorder
+        [HttpPost]
+        public async Task<IActionResult> Reorder(int[] id)
+        {
+
+            int count = 1;
+            foreach(int pageId in id)
+            {
+                Page page = await context.Pages.FindAsync(pageId);
+                page.Sorting = count++;
+                context.Update(page);
+                await context.SaveChangesAsync();
+            }
+            return Ok();
         }
     }
 }
