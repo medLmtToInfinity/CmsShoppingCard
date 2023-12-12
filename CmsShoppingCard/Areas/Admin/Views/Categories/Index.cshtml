@@ -1,0 +1,57 @@
+﻿@model List<CmsShoppingCard.Models.Category>
+
+@{
+    ViewData["Title"] = "Category Home Page";
+}
+
+<h1>Category Home Page</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table sorting" id="pages">
+    <thead>
+        <tr id="home">
+            <th>
+                Category Name
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr id="id_@category.Id" class="@category.Slug">
+
+                <td>
+                    @category.Name
+                </td>
+                <td>
+                    @category.Slug
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@category.Id">Edit</a> |
+                    @if (category.Slug != "home")
+                    {
+                        <a class="deleteConfirmation" asp-action="Delete" asp-route-id="@category.Id">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $("table#pages tbody").sortable({
+            items: "tr:not(.home)",
+            placeholder: "ui-state-highlight",
+            update: function () {
+                let ids = $("table#pages tbody").sortable("serialize");
+                let url = "/admin/categories/reorder";
+
+                $.post(url, ids, function () { })
+            }
+        })
+    </script>
+}
