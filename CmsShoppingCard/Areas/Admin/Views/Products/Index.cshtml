@@ -1,0 +1,72 @@
+﻿@model IEnumerable<CmsShoppingCard.Models.Product>
+
+@{
+    ViewData["Title"] = "Products Page";
+}
+
+<h1>Admin Product Page</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table sorting" id="products">
+    <thead>
+        <tr id="home">
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var product in Model)
+        {
+            <tr id="id_@product.Id" class="@product.Slug">
+                
+                <td>
+                    @product.Name
+                </td>
+                <td>
+                    @product.Price
+                </td>
+                <td>
+                    @product.Category.Name
+                </td>
+                <td>
+                    @product.Image
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@product.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@product.Id">Details</a> |
+                    <a class="deleteConfirmation" asp-action="Delete" asp-route-id="@product.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $("table#products tbody").sortable({
+            items: "tr",
+            placeholder: "ui-state-highlight",
+            update: function () {
+                let ids = $("table#products tbody").sortable("serialize");
+                let url = "/admin/products/reorder";
+
+                $.post(url, ids, function () { })
+            }
+        })
+    </script>
+}

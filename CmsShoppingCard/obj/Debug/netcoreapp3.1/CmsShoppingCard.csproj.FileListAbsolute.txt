@@ -141,3 +141,5 @@ C:\Users\LAMARTI Mohammed\source\repos\CmsShoppingCard\CmsShoppingCard\obj\Debug
 C:\Users\LAMARTI Mohammed\source\repos\CmsShoppingCard\CmsShoppingCard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Index.cshtml.g.cs
 C:\Users\LAMARTI Mohammed\source\repos\CmsShoppingCard\CmsShoppingCard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Create.cshtml.g.cs
 C:\Users\LAMARTI Mohammed\source\repos\CmsShoppingCard\CmsShoppingCard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Categories\Edit.cshtml.g.cs
+C:\Users\LAMARTI Mohammed\source\repos\CmsShoppingCard\CmsShoppingCard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Products\Index.cshtml.g.cs
+C:\Users\LAMARTI Mohammed\source\repos\CmsShoppingCard\CmsShoppingCard\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Products\Create.cshtml.g.cs
